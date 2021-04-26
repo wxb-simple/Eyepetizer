@@ -43,7 +43,8 @@ public class ApiManager {
                 .writeTimeout(TIMEOUT, TimeUnit.SECONDS)  //读取缓存超时10s
                 .retryOnConnectionFailure(true)  //失败重连
                 .addInterceptor(new HeaderInterceptor())  //添加header
-                .addInterceptor(new NetCacheInterceptor());  //添加网络缓存
+                .addInterceptor(new NoNetCacheInterceptor())  //添加无网络缓存策略
+                .addNetworkInterceptor(new NetCacheInterceptor());  //添加网络缓存策略
 
                 addLogIntercepter(builder);  //日志拦截器
                 setCacheFile(builder);  //网络缓存
