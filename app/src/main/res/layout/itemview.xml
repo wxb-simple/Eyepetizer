@@ -46,7 +46,7 @@
             app:layout_constraintTop_toBottomOf="@id/tv_title"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="6dp"
-            android:text='@{item.data.viewCount + "人浏览"}'
+            android:text='@{item.data.viewCount + @string/string_001}'
             tools:text="4923人浏览"/>
 
         <TextView
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:textSize="11sp"
             tools:text="492人参与"
-            android:text='@{item.data.joinCount + "人参与"}'
+            android:text='@{item.data.joinCount + @string/string_002}'
             android:layout_marginLeft="12dp"
             android:layout_marginTop="6dp"
             android:layout_marginBottom="12dp"
